@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
-import com.example.demoEnter.DTO.UserGroupDtos.*;
+import com.example.demoEnter.DTO.UserGroup.*;
 import com.example.demoEnter.Entity.UserGroup;
 import com.example.demoEnter.EntityConvertor.UserGroupConvertor;
 import com.example.demoEnter.Exception.ValidationException;

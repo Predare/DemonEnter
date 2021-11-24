@@ -20,8 +20,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "Entries")
 @Builder
-@Data//ломбок аннотация: генерирует геттеры, сеттеры, иквалс, хеш код методы
-@AllArgsConstructor//ломбок аннотация: конструктор без аргуметов
+@Data
+@AllArgsConstructor
 public class Entry  implements Serializable{
 
     //Entry DataBase ID

@@ -3,7 +3,7 @@ package com.example.demoEnter.Service.Interfaces;
 
 import java.util.List;
 
-import com.example.demoEnter.DTO.UserGroupDtos.*;
+import com.example.demoEnter.DTO.UserGroup.*;
 import com.example.demoEnter.Exception.ValidationException;
 
 public interface UserGroupService {

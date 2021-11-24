@@ -2,7 +2,7 @@ package com.example.demoEnter.Controller;
 
 import javax.annotation.security.RolesAllowed;
 
-import com.example.demoEnter.DTO.EntryDto;
+import com.example.demoEnter.DTO.Entry.EntryDto;
 import com.example.demoEnter.Exception.ValidationException;
 import com.example.demoEnter.Security.Role;
 import com.example.demoEnter.Service.Interfaces.EntryService;

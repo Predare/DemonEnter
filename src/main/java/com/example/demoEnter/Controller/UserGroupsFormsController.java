@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 
-import com.example.demoEnter.DTO.UserGroupDtos.*;
+import com.example.demoEnter.DTO.UserGroup.*;
 import com.example.demoEnter.Exception.ValidationException;
 import com.example.demoEnter.Security.Role;
 import com.example.demoEnter.Service.Interfaces.UserGroupService;

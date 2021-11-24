@@ -1,4 +1,4 @@
-package com.example.demoEnter.DTO;
+package com.example.demoEnter.DTO.Entry;
 
 import lombok.Builder;
 import lombok.Data;

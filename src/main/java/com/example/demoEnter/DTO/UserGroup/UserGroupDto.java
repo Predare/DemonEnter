@@ -1,4 +1,4 @@
-package com.example.demoEnter.DTO.UserGroupDtos;
+package com.example.demoEnter.DTO.UserGroup;
 
 import lombok.Builder;
 import lombok.Data;

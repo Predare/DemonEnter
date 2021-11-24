@@ -18,8 +18,8 @@ import lombok.Data;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "users")
 @Builder
-@Data//ломбок аннотация: генерирует геттеры, сеттеры, иквалс, хеш код методы
-@AllArgsConstructor//ломбок аннотация: конструктор без аргуметов
+@Data
+@AllArgsConstructor
 
 public class User implements Serializable{
     

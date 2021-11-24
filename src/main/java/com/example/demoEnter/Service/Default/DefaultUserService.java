@@ -81,7 +81,6 @@ public class DefaultUserService implements UserService {
             user.setPassword(passwordEncoder.encode(userReqistryDto.getPassword()));
     
             user = userRepo.save(user);
-    
 
             responseList.add(userConvertor.fromUserToUserPublicDto(user));
         }
@@ -116,7 +115,5 @@ public class DefaultUserService implements UserService {
             foundedUsers.add(userConvertor.fromUserToUserPrivateDto(user.get()));
         }
         return foundedUsers;
-    }
-       
-
+    }       
 }

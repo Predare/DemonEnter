@@ -1,6 +1,6 @@
 package com.example.demoEnter.Service.Interfaces;
 
-import com.example.demoEnter.DTO.EntryDto;
+import com.example.demoEnter.DTO.Entry.EntryDto;
 import com.example.demoEnter.Exception.ValidationException;
 
 import java.util.List;

@@ -35,8 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDefaultDetailsService userDefaultDetailsService;
 
-    public SecurityConfig( UserDefaultDetailsService userDefaultDetailsService, JwtTokenFilter jwtTokenFilter) {
-        
+    public SecurityConfig( UserDefaultDetailsService userDefaultDetailsService, JwtTokenFilter jwtTokenFilter) {   
         super();
 
         this.userDefaultDetailsService = userDefaultDetailsService;
@@ -59,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception {       
         // Enable CORS and disable CSRF
         http = http.cors().and().csrf().disable();
 
@@ -82,19 +81,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .defaultSuccessUrl("/")
             .and();
 
-            // Set permissions on endpoints
+        // Set permissions on endpoints
         http.authorizeRequests()
-        .antMatchers("/api/public/**").permitAll()
-        // Our private endpoints
-        .anyRequest().authenticated();
+            .antMatchers("/api/public/**").permitAll()
+            // Our private endpoints
+            .anyRequest().authenticated();   
 
-        
-
-    // Add JWT token filter
-    http.addFilterBefore(
-        jwtTokenFilter,
-        UsernamePasswordAuthenticationFilter.class
-    );
+        // Add JWT token filter
+        http.addFilterBefore(
+            jwtTokenFilter,
+            UsernamePasswordAuthenticationFilter.class
+        );
     }
 
     @Bean
@@ -108,12 +105,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source =
             new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("*");
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
+            config.setAllowCredentials(true);
+            config.addAllowedOrigin("*");
+            config.addAllowedHeader("*");
+            config.addAllowedMethod("*");
+            source.registerCorsConfiguration("/**", config);
+            return new CorsFilter(source);
 
+    }
 }
