@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "UserGroup")
 @Builder
-@Data//ломбок аннотация: генерирует геттеры, сеттеры, иквалс, хеш код методы
-@AllArgsConstructor(access = AccessLevel.PROTECTED)//ломбок аннотация: конструктор без аргуметов
+@Data
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserGroup implements Serializable {
     @Id

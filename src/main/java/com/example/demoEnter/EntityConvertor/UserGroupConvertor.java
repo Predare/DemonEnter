@@ -3,7 +3,7 @@ package com.example.demoEnter.EntityConvertor;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.example.demoEnter.DTO.UserGroupDtos.*;
+import com.example.demoEnter.DTO.UserGroup.*;
 import com.example.demoEnter.Entity.UserGroup;
 
 import org.springframework.stereotype.Component;

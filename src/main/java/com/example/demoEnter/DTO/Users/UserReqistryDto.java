@@ -1,6 +1,6 @@
 package com.example.demoEnter.DTO.Users;
 
-import com.example.demoEnter.DTO.UserGroupDtos.UserGroupDto;
+import com.example.demoEnter.DTO.UserGroup.UserGroupDto;
 
 import lombok.Builder;
 import lombok.Data;
