@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="author" content="" />
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="api/public/assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="api/public/css/styles.css" rel="stylesheet" />
+  <!-- Core theme JS-->
+  <script src="api/public/js/scripts.js"></script>
+  
+  <script src="js/entryController.js"></script>
+
+    <style>
+    /*Code to change color of active link*/
+    .nav-item > .nav-link {
+        color: white;
+    }
+
+    .nav-item > .disabled {
+        color: rgba(165, 165, 165, 0.836);
+    }
+
+    p {
+        color: white;
+    }
+    </style>
+
+    <!-- Jquery framework-->
+    <script src="api/public/libs/jquery-3.6.0.js"></script> 
+    <script> 
+    $(function(){
+        $("#modalAddUsers").load("html/Forms/AddUsersFormTemplate.html"); 
+        $("#page-content").load("html/Templates/UserSlotTemplate.html");
+        $("#modalEditUsers").load("html/Forms/EditUsersFormTemplate.html"); 
+        $("#modalGroupCreateEdit").load("html/Forms/GroupsCreateEditForm.html"); 
+        $("#modalGroupRemoving").load("html/Forms/GroupsRemovingForm.html"); 
+        $("#modalSearchForm").load("html/Forms/UserSearchForm.html"); 
+        $("#modalRemovingForm").load("html/Forms/UsersRemovingForm.html"); 
+        $('#page-content').load('html/SiteSections/News.html');
+    
+
+    });
+
+    $('#News-section-button').click(function(e){
+        
+    $('#page-content').load('html/SiteSections/News.html');
+    });
+
+    $('#Chat-section-button').click(function(e){
+    $('#page-content').load('html/SiteSections/Chat.html');
+    });
+
+    </script>
+
+</head>
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(img/photo-1477959858617-67f85cf4f1d.jpg); background-attachment: fixed;
+background-size: 100% 100%; " >
+
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end border-dark bg-dark" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom  border-dark bg-dark text-white">
+            <div class="d-flex flex-row">
+                <div class="pe-2">
+                    <img class="bg-light rounded p-1" src="img/bank.svg" width="40" height="40"> 
+                </div>
+                <div class="d-flex align-self-center">
+                    <p class="m-0">Lorem ipsum</p> 
+                </div>
+                </div>
+            </div>
+            
+            
+        <div class="list-group list-group-flush">
+            <div id="News-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white" href="#!">
+                <div class="d-flex flex-row align-items-center">
+                    <p class="m-0 flex-grow-1 ">News</p>
+                        <img src="img/arrow-right.svg" class="bg-light rounded" alt="Arrow right" width="20" height="20">
+                </div>              
+            </div>
+            <div id="Chat-section-button" class="list-group-item list-group-item-action list-group-item-dark p-3 text-white" href="#!">
+                <div class="d-flex flex-row align-items-center">
+                    <p class="m-0 flex-grow-1 ">Chat</p>
+                        <img src="img/arrow-right.svg" class="bg-light rounded" alt="Arrow right" width="20" height="20">
+                </div>    
+                
+            </div>
+        </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper" class="d-flex flex-column">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom  border-dark">
+            <div class="container-fluid">
+                <button class="btn btn-secondary" id="sidebarToggle">Toggle Menu</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item active"><a class="nav-link text-white" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#!">Link</a></li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu dropdown-menu-end border-light bg-dark" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-white bg-dark" href="#!">Action</a>
+                                <a class="dropdown-item text-white bg-dark" href="#!">Another action</a>
+                                <div class="dropdown-divider border-light"></div>
+                                <a class="dropdown-item text-white bg-dark" href="#!">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div id="page-content" class="container-fluid flex-grow-1 d-flex ps-1"></div>
+        
+        <button  style="position: fixed;  bottom: 2vh;
+        right: 2vw; " type="button" class="btn btn-secondary rounded-circle border border-dark"> 
+            <img class ="p-1 "src="img/chat-left.svg" width = "40" height="40"></button>
+    </div>
+</div>
+ <!-- Admin Panel -->
+<div class="bg-dark rounded" style="position: fixed;  right: 2vw; top: 10vh; width: 65px;">
+    <button type="button" class="mt-1 ms-1 me-0 btn btn-secondary rounded-circle border border-dark " data-bs-toggle="modal" data-bs-target="#modalAddUsers"> 
+        <img src="img/person-plus-fill.svg" width = "30" height="30"></button>
+    <button type="button" class="mt-2 ms-1 me-0 mb-1 btn btn-secondary rounded-circle border border-dark" data-bs-toggle="modal" data-bs-target="#modalEditUsers"> 
+        <img src="img/personvideo.svg" width = "30" height="30"></button>
+    <button type="button" class="mt-2 ms-1 me-0 mb-1 btn btn-secondary rounded-circle border border-dark" data-bs-toggle="modal" data-bs-target="#modalGroupCreateEdit"> 
+        <img src="img/personvideo.svg" width = "30" height="30"></button>
+    <button type="button" class="mt-2 ms-1 me-0 mb-1 btn btn-secondary rounded-circle border border-dark" data-bs-toggle="modal" data-bs-target="#modalGroupRemoving"> 
+        <img src="img/personvideo.svg" width = "30" height="30"></button>
+    <button type="button" class="mt-2 ms-1 me-0 mb-1 btn btn-secondary rounded-circle border border-dark" data-bs-toggle="modal" data-bs-target="#modalSearchForm"> 
+        <img src="img/personvideo.svg" width = "30" height="30"></button>
+    <button type="button" class="mt-2 ms-1 me-0 mb-1 btn btn-secondary rounded-circle border border-dark" data-bs-toggle="modal" data-bs-target="#modalRemovingForm"> 
+        <img src="img/personvideo.svg" width = "30" height="30"></button>
+</div>
+
+    <!-- The Modal: Add Entry -->
+    <div class="modal fade" id="modalAddEntry">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header bg-dark">
+            <h4 class="modal-title text-white">New entry</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body bg-dark">
+                    <div class="row">
+                    <form >
+                    <div class="mb-3">
+                        <label class="text-white" for="entryName">Entry name</label>
+                        <input type="text" class="form-control" id="entryName" placeholder="Call entry" name="entry">
+                    </div>
+                    <div class="mb-3">
+                        <label class="text-white" for="text">Content:</label>
+                        <textarea class="form-control" rows="15" id="entryText" name="text"></textarea>
+                    </div>
+                    
+                    </form>
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer m-0 p-0 pt-3">
+                <div class="container m-0">
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" onclick="addEntryInDB()" class="btn btn-secondary btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- The Modal: New Users -->
+    <div class="modal fade" id="modalAddUsers"></div>
+    </div>
+
+    <!-- The Modal: Edit Users -->
+    <div class="modal fade" id="modalEditUsers"></div>
+    </div>
+
+    <!-- The Modal: Group create Users -->
+    <div class="modal fade" id="modalGroupCreateEdit"></div>
+    </div>
+
+    <!-- The Modal: Group removing -->
+    <div class="modal fade" id="modalGroupRemoving"></div>
+    </div>
+
+    <!-- The Modal: Search users -->
+    <div class="modal fade" id="modalSearchForm"></div>
+    </div>
+
+    <!-- The Modal: Removing users -->
+    <div class="modal fade" id="modalRemovingForm"></div>
+    </div>
+  
+    <script>
+            $('#News-section-button').click(function(e){
+        
+        $('#page-content').load('html/SiteSections/News.html');
+        });
+    
+        $('#Chat-section-button').click(function(e){
+        $('#page-content').load('html/SiteSections/Chat.html');
+        });
+    </script>
+</body>
+</html>

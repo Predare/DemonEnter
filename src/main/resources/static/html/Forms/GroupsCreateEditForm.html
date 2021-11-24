@@ -1,0 +1,67 @@
+<body>
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header bg-dark">
+        <h4 class="modal-title text-white">Groups creating</h4>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body bg-dark m-0 p-3">
+            <form action="/action_page.php">
+                <div class="row p-0 m-0">
+                    <div id="userGroupList" class="input-group mt-3 mb-3">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">User Group
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="refreshAuthoritiesForm(this.innerHTML)" href="#">Group 1</a></li>
+                        <li><a class="dropdown-item" onclick="refreshAuthoritiesForm(this.innerHTML)" href="#">Group 2</a></li>
+                        <li><a class="dropdown-item" onclick="refreshAuthoritiesForm(this.innerHTML)" href="#">Group 3</a></li>
+                        </ul>
+                        <input type="text" class="form-control" placeholder="User Group">
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="userEditCheckbox" name="" value="something" checked>
+                        <label class="form-check-label text-white">User Editing</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="entryEditCheckbox" name="" value="something" checked>
+                        <label class="form-check-label  text-white">Entry editing</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="groupEditCheckbox" name="" value="something" checked>
+                        <label class="form-check-label  text-white">Groups editing</label>
+                    </div>
+                        
+                    </div>
+
+                </div>
+
+                </form>
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer bg-dark  m-0 p-0 pt-3">
+                <div class="container m-1 mb-2">
+                    <div class="d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" onclick="saveUserGroup()" class="btn btn-secondary btn-lg">Save</button>
+                            </div>
+                            
+                            <div class="col">
+                                <button type="submit" onclick="deleteGroup()" class="btn btn-secondary btn-lg">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+    </body>

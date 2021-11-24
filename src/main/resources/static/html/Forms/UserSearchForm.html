@@ -1,0 +1,56 @@
+<head>
+    <script> 
+    $(function(){
+    $("#userInformationFormSearch").load("html/Forms/Components/UserInformationTable.html"); 
+    });
+    </script>
+</head>
+
+
+<body>
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header bg-dark">
+        <h4 class="modal-title text-white">Search user</h4>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body bg-dark m-0 p-3">
+            <form action="/action_page.php">
+                <div class="row p-0 m-0">
+                    <div id="userInformationFormSearch"></div>
+                </div>
+            </form>
+        </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer bg-dark  m-0 p-0 pt-2">
+                <div class="container m-1 mb-2">
+                    <div class="d-flex justify-content-center">
+                        <div class="row ">
+                            <div class="d-flex justify-content-center">            
+                                <p class="text-white p-0 m-0 h4">Founded Users: n</p>
+                            </div>  
+                            <div class="input-group mb-3 pt-0 mt-2">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                </ul>
+                                <input type="text" class="form-control" placeholder="User Group">
+                            </div>     
+                            <div class="d-flex justify-content-center">  
+                                <button type="submit" class="btn btn-secondary btn-lg">Submit</button>   
+                            </div>                            
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+        </div>
+    </body>
