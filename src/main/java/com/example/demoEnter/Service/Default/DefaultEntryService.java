@@ -2,7 +2,7 @@ package com.example.demoEnter.Service.Default;
 
 import java.util.List;
 
-import com.example.demoEnter.DTO.EntryDto;
+import com.example.demoEnter.DTO.Entry.EntryDto;
 import com.example.demoEnter.Entity.Entry;
 import com.example.demoEnter.EntityConvertor.EntryConvertor;
 import com.example.demoEnter.Exception.ValidationException;

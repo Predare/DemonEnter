@@ -1,6 +1,6 @@
 package com.example.demoEnter.EntityConvertor;
 
-import com.example.demoEnter.DTO.EntryDto;
+import com.example.demoEnter.DTO.Entry.EntryDto;
 import com.example.demoEnter.Entity.Entry;
 
 import org.springframework.stereotype.Component;
